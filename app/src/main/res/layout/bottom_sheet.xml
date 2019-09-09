@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FC383838"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="130dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentView"
+        android:alpha="0"
+        android:background="@drawable/bottom_back"
+        android:layout_marginTop="20dp"
+        >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/re_topBar"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="Queue"
+        android:fontFamily="@font/worksans_medium"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_marginLeft="14dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/save"
+        android:textSize="12dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:text="SAVE"
+        android:fontFamily="@font/worksans_bold"
+        android:paddingTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="14dp"
+        />
+
+
+
+</RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/re_topBar"
+            android:id="@+id/contentRecyclerVIew"
+            />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:id="@+id/peekView"
+    android:alpha="1"
+    android:background="#666666"
+    >
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="Music title identification"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#f00"
+        android:textSize="16dp"
+        android:singleLine="true"
+        android:fontFamily="@font/worksans_semibold"
+        android:id="@+id/music_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music Description this place"
+         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:singleLine="true"
+        android:layout_below="@+id/music_title"
+        android:id="@+id/description"
+        android:fontFamily="@font/worksans_medium"
+        />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:civ_circle_background_color="#f00"
+        android:src="@mipmap/ic_play_light"
+        android:id="@+id/play_pause"
+        />
+    
+    <es.claucookie.miniequalizerlibrary.EqualizerView
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        custom:foregroundColor="#f00"
+        android:id="@+id/equaliser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/play_pause"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="10dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/item_previous"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_prev_light" />
+
+        <ImageView
+            android:id="@+id/item_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_next_light" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>

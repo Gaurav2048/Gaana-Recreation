@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#1A1A1A"
+    android:layout_height="match_parent"
+    tools:context=".MusicalActivity"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        >
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/scrollView"
+            android:layout_centerVertical="true"
+             />
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/bottom_sheet" />
+
+</android.support.design.widget.CoordinatorLayout>

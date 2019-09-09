@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MusicalActivity"
+    tools:showIn="@layout/app_bar_musical">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/PlayerView"
+    android:id="@+id/container"
+    ></FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/bottomNavigation"
+        android:background="@color/white"
+        android:id="@+id/PlayerView"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#DFDFDF"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/devider"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            
+            
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="#333333"
+            android:id="@+id/imageThumb"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageThumb"
+            android:id="@+id/songTitle"
+            android:text="Song header dewscription"
+            android:fontFamily="@font/worksans_semibold"
+            android:layout_toLeftOf="@+id/play_pause"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+
+
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageThumb"
+            android:layout_below="@+id/songTitle"
+            android:text="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/descriptionText"
+            android:freezesText="true"
+            android:layout_toLeftOf="@+id/play_pause"
+            android:scrollHorizontally="true"
+
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/play_pause"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_play_red"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="45"
+            android:max="100"
+            android:progressTint="#E52D2F"
+            android:background="#cbcbcb"
+            />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/musical"
+        app:itemIconTint="@drawable/check_home"
+        android:background="@color/white"
+        app:itemTextColor="@drawable/check_home"
+        android:id="@+id/bottomNavigation"
+        />
+
+
+</RelativeLayout>
